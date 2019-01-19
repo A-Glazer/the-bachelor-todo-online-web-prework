@@ -66,11 +66,11 @@ def get_average_age_for_season(data, season)
     if season == season_num
      data[season_num].each do |person|
 
-       age_total += person["age"].to_i
+       age_total += person["age"].to_f
 
 end
 
-      return age_total /data[season_num].count
+      return age_total /data[season_num].count.round
 
 end
 end
